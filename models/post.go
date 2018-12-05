@@ -1,8 +1,9 @@
 package models
 
 type Post struct {
-	Id    int
-	User  *User
-	Title string
-	Body  string
+	ID         int
+	User       *User `orm:"rel(fk)"`
+	Title      string
+	Body       string
+	Categories []*Categories `orm:"rel(m2m)"`
 }

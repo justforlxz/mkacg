@@ -1,6 +1,6 @@
 package models
 
 type Profile struct {
-	Id   int
+	ID   int
 	User *User `orm:"reverse(one)"`
 }

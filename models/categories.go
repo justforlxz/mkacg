@@ -1,6 +1,6 @@
 package models
 
 type Categories struct {
-	Id int
-	Post *Post[]
+	ID   int
+	Post []*Post `orm:"reverse(many)"`
 }
