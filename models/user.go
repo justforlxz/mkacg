@@ -1,8 +1,8 @@
 package models
 
 type User struct {
-	ID      int
-	Name    string
-	Profile *Profile `orm:"rel(one)"`
-	Post    []*Post  `orm:"reverse(many)"`
+	ID       int
+	Salt     string
+	Password string
+	Profile  *Profile `orm:"reverse(one)"`
 }

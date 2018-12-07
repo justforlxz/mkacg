@@ -8,7 +8,7 @@ import (
 
 type Post struct {
 	ID         int
-	User       *User `orm:"rel(fk)"`
+	Profile    *Profile `orm:"rel(fk)"`
 	Title      string
 	Body       string
 	Categories []*Categories `orm:"rel(m2m)"`
